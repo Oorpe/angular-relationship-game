@@ -1,0 +1,17 @@
+<mat-list>
+  <mat-list-item *ngFor="let q of data.questions">
+    montako {{q.question}} puolisosi osaa nimetä?
+    <div style="flex: 1 1 auto;" ></div>
+      <button mat-raised-button color="warn" (click)="data.removeQuestion(q)">poista kysymys</button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+    <mat-list-item>
+      <mat-form-field>
+        <input [(ngModel)]="q" matInput placeholder="montako x puolisosi osaa nimetä?">
+      </mat-form-field>
+      <!-- <mat-form-field> -->
+      <div style="flex: 1 1 auto;" ></div>
+        <button mat-raised-button color="primary" (click)="addQuestion(q)">Lisää kysymys</button>
+      <!-- </mat-form-field> -->
+    </mat-list-item>
+</mat-list>
